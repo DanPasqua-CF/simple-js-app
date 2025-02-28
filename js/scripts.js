@@ -7,13 +7,19 @@ let pokemonObject2 = {
   ]
 };
 
-let pokemonObject3Types = ["normal", "fairy"];
+let pokemonObject3Types = [
+  "normal",
+  "fairy"
+];
 
 let pokemonList = [
   {
     name: "Bulbasaur",
     height: 7,
-    types: ["grass", "poison"]
+    types: [
+      "grass",
+      "poison"
+    ]
   },
   {
     name: pokemonObject2.name,
