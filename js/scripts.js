@@ -34,5 +34,11 @@ let pokemonList = [
 ];
 
 for (let i = 0; i < pokemonList.length; i++) {
-  document.write(`<br>${pokemonList[i].name}: ${pokemonList[i].height}`);
+  if (pokemonList[i].name === "Igglybuff") {
+    document.write(`<br>${pokemonList[i].name} (height: ${pokemonList[i].height * 0.5})`);
+  } else if (pokemonList[i].height >= 1.0) {
+    document.write(`<br>${pokemonList[i].name} (height: ${pokemonList[i].height}) - Wow, that's big!`);
+  } else {
+    document.write(`<br>${pokemonList[i].name} (height: ${pokemonList[i].height})`);
+  }
 }
