@@ -1,6 +1,6 @@
 let pokemonObject2 = {
   name: "Tentacool",
-  height: 2,
+  height: 2.1,
   types: [
     "water",
     "poison"
@@ -15,7 +15,7 @@ let pokemonObject3Types = [
 let pokemonList = [
   {
     name: "Bulbasaur",
-    height: 7,
+    height: 0.7,
     types: [
       "grass",
       "poison"
@@ -33,4 +33,6 @@ let pokemonList = [
   }
 ];
 
-console.log(pokemonList);
+for (let i = 0; i < pokemonList.length; i++) {
+  document.write(`<br>${pokemonList[i].name}: ${pokemonList[i].height}`);
+}
