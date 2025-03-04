@@ -33,15 +33,15 @@ let pokemonList = [
   }
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
+pokemonList.forEach(pokemon => {
   // Divide Igglybuff's height by 2
-  if (pokemonList[i].name === "Igglybuff") {
-    document.write(`<br>${pokemonList[i].name} (height: ${pokemonList[i].height / 2})`);
-  } else if (pokemonList[i].height >= 1.0) {
+  if (pokemon.name === "Igglybuff") {
+    document.write(`<br>${pokemon.name} (height: ${pokemon.height / 2})`);
+  } else if (pokemon.height >= 1.0) {
     // Add special messaging to Pokemon with height greater than 1.0
-    document.write(`<br>${pokemonList[i].name} (height: ${pokemonList[i].height}) - Wow, that's big!`);
+    document.write(`<br>${pokemon.name} (height: ${pokemon.height}) - Wow, that's big!`);
   } else {
     // Output Pokemon's name and height
-    document.write(`<br>${pokemonList[i].name} (height: ${pokemonList[i].height})`);
+    document.write(`<br>${pokemon.name} (height: ${pokemon.height})`);
   }
-}
+});
