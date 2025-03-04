@@ -1,39 +1,48 @@
-let pokemonObject2 = {
-  name: "Tentacool",
-  height: 2.1,
-  types: [
-    "water",
-    "poison"
-  ]
-};
+let pokemonRepository = (function () {
+  let pokemonList = [
+    {
+      name: "Bulbasaur",
+      height: 0.7,
+      types: [
+        "grass",
+        "poison"
+      ]
+    },
+    {
+      name: "Tentacool",
+      height: 2.1,
+      types: [
+        "water",
+        "poison"
+      ]
+    },
+    {
+      name: "Igglybuff",
+      height: 1,
+      types: [
+        "normal",
+        "fairy"
+      ]
+    }
+  ];
 
-let pokemonObject3Types = [
-  "normal",
-  "fairy"
-];
-
-let pokemonList = [
-  {
-    name: "Bulbasaur",
-    height: 0.7,
-    types: [
-      "grass",
-      "poison"
-    ]
-  },
-  {
-    name: pokemonObject2.name,
-    height: pokemonObject2.height,
-    types: pokemonObject2.types
-  },
-  {
-    name: "Igglybuff",
-    height: 1,
-    types: pokemonObject3Types
+  function add(pokemon) {
+    pokemonList.push(pokemon);
   }
-];
 
-pokemonList.forEach(pokemon => {
+  function getAll() {
+    return pokemonList;
+  }
+
+  return {
+    add: add,
+    getAll: getAll
+  };
+})();
+
+pokemonRepository.add({ name: 'Pikachu', height: 0.25, types: 'water' });
+
+pokemonRepository.getAll().forEach(pokemon => {
   // Divide Igglybuff's height by 2
   if (pokemon.name === "Igglybuff") {
     document.write(`<br>${pokemon.name} (height: ${pokemon.height / 2})`);
