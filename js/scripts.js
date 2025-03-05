@@ -30,27 +30,47 @@ let pokemonRepository = (function () {
     pokemonList.push(pokemon);
   }
 
+  function addListItem(pokemon) {
+    // Create elements
+    let list = document.querySelector('ul');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button')
+
+    // Set button text and styles
+    button.innerText = pokemon.name;
+    button.classList.add('button');
+
+    // Append button to listItem and listItem to ul
+    listItem.appendChild(button);
+    list.appendChild(listItem);
+
+    // Add clickEvent
+    clickEvent(button, pokemon);
+  }
+
+  function clickEvent(button, pokemon) {
+    button.addEventListener('click', function () {
+      showDetails(pokemon);
+    })
+  }
+
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
   function getAll() {
     return pokemonList;
   }
 
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
 
 pokemonRepository.add({ name: 'Pikachu', height: 0.25, types: 'water' });
 
 pokemonRepository.getAll().forEach(pokemon => {
-  // Divide Igglybuff's height by 2
-  if (pokemon.name === "Igglybuff") {
-    document.write(`<br>${pokemon.name} (height: ${pokemon.height / 2})`);
-  } else if (pokemon.height >= 1.0) {
-    // Add special messaging to Pokemon with height greater than 1.0
-    document.write(`<br>${pokemon.name} (height: ${pokemon.height}) - Wow, that's big!`);
-  } else {
-    // Output Pokemon's name and height
-    document.write(`<br>${pokemon.name} (height: ${pokemon.height})`);
-  }
+  pokemonRepository.addListItem(pokemon);
 });

@@ -1,5 +1,40 @@
+:root {
+  --buttonBackgroundColor: lightgrey;
+  --buttonBottomBorder: 3px solid rgba(0, 0, 0, 0.3);
+  --buttonTextColor: navy;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--buttonBackgroundColor);
+  border: none;
+  border-bottom: var(--buttonBottomBorder);
+  border-radius: 5px;
+  color: var(--buttonTextColor);
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  width: 10em;
+}
+
+/* Reverse colors on hover */
+.button:hover {
+  cursor: pointer;
+  background-color: var(--buttonTextColor);
+  color: var(--buttonBackgroundColor)
+}
+
+ul {
+  list-style: none;
 }
