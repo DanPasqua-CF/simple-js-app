@@ -1,0 +1,52 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: lightgrey;
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  color: navy;
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-decoration: none;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  width: 10em;
+}
+
+/* Reverse colors on hover */
+.button:hover {
+  cursor: pointer;
+  background-color: navy;
+  color: lightgrey
+}
+
+ul {
+  list-style: none;
+}

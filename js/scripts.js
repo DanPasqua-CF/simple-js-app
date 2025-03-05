@@ -38,6 +38,7 @@ let pokemonRepository = (function () {
 
     // Set button text and styles
     button.innerText = pokemon.name;
+    button.setAttribute('alt', `Button to display ${pokemon.name}'s details`);
     button.classList.add('button');
 
     // Append button to listItem and listItem to ul
