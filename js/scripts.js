@@ -145,7 +145,7 @@ let pokemonRepository = (function () {
   };
 })();
 
-// Fetch pokemon
+// Get pokemon
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
