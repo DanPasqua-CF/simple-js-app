@@ -35,7 +35,7 @@ let pokemonRepository = (function () {
     });
   }
 
-  function showModal(title, text, img) {
+  function showModal(name, height, img) {
     // Modal container
     let modalContainer = document.querySelector('#modal-container');
     modalContainer.innerText = '';
@@ -52,11 +52,11 @@ let pokemonRepository = (function () {
 
     // Pokemon name
     let pokemonNameElement = document.createElement('h1');
-    pokemonNameElement.innerText = title;
+    pokemonNameElement.innerText = name;
 
     // Pokemon height
     let pokemonHeightElement = document.createElement('p');
-    pokemonHeightElement.innerText = text;
+    pokemonHeightElement.innerText = height;
 
     // Pokemon image
     let pokemonImageElement = document.createElement('img');
