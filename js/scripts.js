@@ -20,7 +20,7 @@ let pokemonRepository = (function () {
     // Set button text, styles and click event
     button.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
     button.setAttribute('alt', `Button to display ${pokemon.name} 's details`);
-    button.classList.add('button');
+    button.classList.add('btn', 'btn-primary', 'btn-lg');
 
     // Append button to listItem and listItem to ul
     listItem.appendChild(button);
