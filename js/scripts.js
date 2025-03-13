@@ -14,6 +14,7 @@ let pokemonRepository = (function () {
     // Create elements
     let list = document.querySelector('.pokemon-list');
     let listItem = document.createElement('li');
+    list.classList.add('list-group-item');
     let button = document.createElement('button');
 
     // Set button text, styles and click event
