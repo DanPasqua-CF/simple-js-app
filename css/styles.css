@@ -8,11 +8,35 @@ html {
   font-family: 'Lato', sans-serif;;
 }
 
+h1 {
+  font-size: 500%;
+  margin: 0;
+  color: #cc3938;
+}
+
 .button {
   display: flex;
   text-align: center;
-  justify-content: center;
+  justify-content: center;  
   width: 150px;
-  padding: 2%;
-  margin: auto 5%;
+  height: 60px;
+}
+
+.modal-header,
+.modal-body {
+  background-color: lightgrey;
+  color: navy;
+}
+
+.modal-title {
+  display: flex;
+  font-size: 400%;
+  text-align: center;
+  margin: 0;
+}
+
+.pokemon-height {
+  font-size: 250%;
+  text-align: left;
+  margin: 0;
 }

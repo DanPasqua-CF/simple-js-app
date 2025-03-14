@@ -13,8 +13,8 @@ let pokemonRepository = (function () {
   function addListItem(pokemon) {
     // Create list and list items
     let list = document.querySelector('.pokemon-list');
-    let listItem = document.createElement('li');
-    listItem.classList.add('list-group-item');
+    let listItem = document.createElement('div');
+    listItem.classList.add('col', 'justify-content-center', 'p-1', 'g-2');
 
     // Create button
     let button = document.createElement('button');
@@ -45,7 +45,7 @@ let pokemonRepository = (function () {
 
     // Pokemon height
     let pokemonHeight = document.querySelector('.pokemon-height');
-    pokemonHeight.innerText = `Height: ${height}`;
+    pokemonHeight.innerText = `${height}`;
 
     // Pokemon image
     let pokemonImage = document.querySelector('.pokemon-image');

@@ -19,17 +19,17 @@
 
 <body>
   <header>
-    <div class="container">
+    <div class="container-fluid">
       <br>
       <h1 class="text-center">Pok&#233;Dex</h1>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-start">
+      <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler align-center" type="button" data-toggle="collapse" data-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav justify-content-center">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
             </li>
@@ -46,10 +46,10 @@
   </header>
 
   <main id="modal-container">
-    <ul class="pokemon-list list-group"></ul>
+    <div class="row pokemon-list m-2"></div>
 
     <!-- Create the modal -->
-    <div id="pokemon-modal" class="modal fade" tabindex="-1">
+    <div id="pokemon-modal" class="modal custom fade" tabindex="-1">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
 
