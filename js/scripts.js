@@ -20,7 +20,7 @@ let pokemonRepository = (function () {
     let button = document.createElement('button');
     button.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
     button.setAttribute('alt', `Button to display ${pokemon.name}'s details`);
-    button.classList.add('btn', 'btn-primary', 'btn-lg');
+    button.classList.add('btn', 'btn-primary', 'btn-lg', 'button');
 
     // Append button to listItem and listItem to ul
     listItem.appendChild(button);
@@ -53,44 +53,12 @@ let pokemonRepository = (function () {
     pokemonImage.setAttribute('width', '100%');
     pokemonImage.setAttribute('height', '100%');
 
-    // // Append elements to modal and modal container
-    // modalHeader.appendChild(closeButtonElement);
-    // modal.appendChild(pokemonNameElement);
-    // modalBody.appendChild(pokemonHeightElement);
-    // modalBody.appendChild(pokemonImageElement);
-    // modalContainer.appendChild(modal);
-
-
-
-
-
-
-
-    // // Modal container
-    // let modalContainer = document.querySelector('#modal-container');
-    // modalContainer.innerText = '';
-
-    // // Modal
-    // let modal = document.querySelector('modal');
-
-    // Close button
-    let closeButtonElement = document.querySelector('.close');
-
     modal.classList.add('is-visible');
 
     // Close modal when user clicks outside of the modal
-    modal.addEventListener('click', (e) => {
-      let target = e.target;
-
-      if (target === modalContainer) {
-        hideModal();
-      }
+    modal.addEventListener('click', () => {
+      modal.hide();
     });
-  }
-
-  function hideModal() {
-    let modal = document.querySelector('#modal');
-    modal.hide();
   }
 
   function showDetails(pokemon) {
@@ -109,7 +77,7 @@ let pokemonRepository = (function () {
     let modalContainer = document.querySelector('#modal-container');
 
     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-      hideModal();
+      modal.hide();
     }
   });
 
