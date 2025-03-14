@@ -14,7 +14,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/styles.production.css">
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
 
 <body>
@@ -22,28 +22,24 @@
 
   </header>
 
-  <main class="modal-container">
+  <main id="modal-container">
     <ul class="pokemon-list list-group"></ul>
 
     <!-- Create the modal -->
-    <div class="modal fade" tabindex="1" role="dialog" aria-labelledby="pokemonModal">
+    <div id="pokemon-modal" class="modal fade" tabindex="-1">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
 
           <!-- Modal header -->
           <div class="modal-header">
             <h5 class="modal-title"></h5>
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">Close</button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">X</button>
           </div>
 
           <!-- Modal body -->
-          <div class="modal-body text-center">
-            <p>Lorem ipsum</p>
-          </div>
-
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn-primary" data-bs-dismiss="modal">Close</button>
+          <div class="modal-body">
+            <p class="pokemon-height"></p>
+            <img class="pokemon-image img-fluid" alt="Image of pokemon">
           </div>
         </div>
 
