@@ -21,6 +21,10 @@ let pokemonRepository = (function () {
     button.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
     button.setAttribute('alt', `Button to display ${pokemon.name}'s details`);
     button.classList.add('btn', 'btn-primary', 'btn-lg', 'button');
+    $('.button').css('background-color', '#c73638');
+    $('#searchField').css('border-color', '#234276')
+    $('.btn-outline-success').css('color', '#234276');
+    $('.btn-outline-success').css('border-color', '#234276');
 
     // Append button to listItem and listItem to ul
     listItem.appendChild(button);
@@ -124,5 +128,14 @@ let pokemonRepository = (function () {
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
+  });
+
+  $(document).ready(function () {
+    $("#searchField").on("keyup", function () {
+      var value = $(this).val().toLowerCase();
+      $(".button").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+      });
+    });
   });
 });
