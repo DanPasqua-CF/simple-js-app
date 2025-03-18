@@ -4,28 +4,37 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: 'Lato', sans-serif;;
+body {
+  font-family: "Maiden Orange", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 1.75rem;
+  justify-content: space-evenly;
 }
 
 h1 {
   font-size: 500%;
   margin: 0;
-  color: #cc3938;
+  color: #c73638;
 }
 
 .button {
   display: flex;
   text-align: center;
-  justify-content: center;  
+  justify-content: center;
   width: 150px;
   height: 60px;
+  background-color: #c73638;
 }
 
 .modal-header,
 .modal-body {
   background-color: lightgrey;
-  color: navy;
+  color: #234276;
 }
 
 .modal-title {
