@@ -14,6 +14,7 @@ body {
   display: flex;
   font-size: 1.75rem;
   justify-content: space-evenly;
+  color: #234276;
 }
 
 h1 {

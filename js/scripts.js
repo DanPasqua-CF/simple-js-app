@@ -22,7 +22,6 @@ let pokemonRepository = (function () {
     button.setAttribute('alt', `Button to display ${pokemon.name}'s details`);
     button.classList.add('btn', 'btn-primary', 'btn-lg', 'button');
     $('.button').css('background-color', '#c73638');
-    $('.nav-link').css('color', '#234276');
     $('#searchField').css('border-color', '#234276')
     $('.btn-outline-success').css('color', '#234276');
     $('.btn-outline-success').css('border-color', '#234276');
